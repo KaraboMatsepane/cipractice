@@ -1,2 +1,7 @@
 FROM python:3.11-slim
-CMD ["python", "-c", "print('hello from inside docker')"]
+
+WORKDIR /app
+
+COPY app.py .
+
+CMD ["python", "-c", "app.py"]
