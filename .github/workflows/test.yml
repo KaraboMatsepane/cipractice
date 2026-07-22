@@ -5,8 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python
         with:
           python-version: "3.11"
+      - run: python --version
       - run: python --version
       - run: echo "Hello from pipeline"
       - run: echo "another message"
