@@ -11,3 +11,4 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -c "import requests; print(requests.__version__)"
       - run: docker build -t my-test-image .
+      - run: docker run my-test-image
