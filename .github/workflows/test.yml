@@ -6,3 +6,4 @@ jobs:
     steps:
       - run: echo "Hello from pipeline"
       - run: echo "another message"
+      - run: cat note.txt
