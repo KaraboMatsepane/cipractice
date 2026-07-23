@@ -15,3 +15,4 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::030959774675:role/githubactions-s3-access
+          aws-region: us-east-1
