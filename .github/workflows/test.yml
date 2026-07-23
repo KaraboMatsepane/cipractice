@@ -16,3 +16,9 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::030959774675:role/githubactions-s3-access
           aws-region: us-east-1
+
+      - name: verify aws identity
+        run: aws sts get-caller-identity
+
+      - name: deploy idex.html to s3 bucket
+        run: aws s3 cp index.html s3://practice-s3-030959774675-us-east-1-an/index.html
