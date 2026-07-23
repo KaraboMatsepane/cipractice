@@ -1,0 +1,11 @@
+name: test env variables
+on: workflow_dispatch
+env:
+  NAME: "Karabo"
+
+jobs:
+  test-env-varible:
+    runs-on: Ubuntu-latest
+    steps:
+      - name: print NAME env variable
+        run: echo "My name is $NAME"
