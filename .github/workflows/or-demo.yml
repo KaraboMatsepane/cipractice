@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: get actor
         id: step1
-        run: echo "actor=${{ github.actor }}" >> GITHUB.OUTPUT
+        run: echo "actor=${{ github.actor }}" >> $GITHUB.OUTPUT
 
       - name: print actor
         run: echo "The actor is ${{ steps.step1.outputs.actor }}"
