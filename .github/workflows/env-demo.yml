@@ -5,7 +5,11 @@ env:
 
 jobs:
   test-env-varible:
+    env:
+      NAME: "Charles"
     runs-on: Ubuntu-latest
     steps:
       - name: print NAME env variable
+        env:
+          NAME: "Matsepane"
         run: echo "My name is $NAME"
