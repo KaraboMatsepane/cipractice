@@ -1,9 +1,18 @@
-name: full pipeline test
+name: deploy website to s3 bucket
 on: push
+permissions:
+  id-token: write
+  contents: read
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: build step
-        run: echo "A demo build"
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::030959774675:role/githubactions-s3-access
+          aws-region: us-east-1
 
