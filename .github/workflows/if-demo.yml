@@ -1,0 +1,17 @@
+name: if condition
+on:
+  push:
+    branches:
+      - main
+      - karabo
+jobs:
+  if-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run if on main
+        if: github.ref == 'refs/head.main'
+        run: echo "I am on main"
+
+      - name: run anywhere
+        run: echo "run everywhere"
+
