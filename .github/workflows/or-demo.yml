@@ -12,5 +12,5 @@ jobs:
         run: echo "The actor is ${{ steps.step1.outputs.actor }}"
 
       - name: run for actor or Zinhle
-        if: github.actor=='steps.step1.outputs.actor' || github.actor=='Zinhle'
+        if: github.actor== steps.step1.outputs.actor || github.actor=='Zinhle'
         run: echo "ran for Karabo or zinhle"
